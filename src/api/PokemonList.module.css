@@ -1,0 +1,82 @@
+
+.lista_pokemon {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 2rem;
+  
+}
+
+.lista_pokemon div button {
+ margin: 0.2rem;
+}
+.lista_pokemon div button:nth-child(1) {
+  padding: 0.5rem 2.3rem;
+ }
+
+.lista_pokemon h2 {
+  font-size: 2rem;  
+  color: #4592C4;
+  
+}
+
+.lista_pokemon p {
+  padding: 1rem;
+}
+
+.lista_pokemon ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin: 1rem;
+  
+}
+
+.lista_pokemon ul li {
+  width: 22%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1.3rem 0.3rem;
+  padding: 1.4rem 0;
+  border-radius: 30px;
+  background-color:#F2F2F2;
+  box-shadow: 0px 0px 20px 1px #00000040;
+  cursor: pointer;  
+}
+
+.lista_pokemon ul li:hover {
+  transform: scale(1.1);
+  
+}
+
+.lista_pokemon ul li span {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.lista_pokemon button {  
+  margin: 0 auto;
+  background-color:#4592C499;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  border: none;  
+  border-radius: 30px;
+  cursor: pointer;  
+}
+
+
+.lista_pokemon button:hover {
+  background-color:#4592C4
+}
+
+@media (max-width: 767px) {
+  .lista_pokemon ul li {
+    width: 46%;
+     
+  }
+  
+}
