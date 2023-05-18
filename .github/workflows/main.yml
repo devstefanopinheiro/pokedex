@@ -14,14 +14,6 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
 
-      - name: 🗑️ Remove /lost+found directory
-        run: |
-          rm -rf /lost+found
-
       - name: ⚙️ Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.ftp_host }}
-          username: ${{ secrets.ftp_user }}
-          password: ${{ secrets.ftp_password }}
-          local-dir: /
+        run: |
+          rsync -av --exclude='*' --include='build/**' --exclude='build' $GITHUB_WORKSPACE/ ${{ secrets.ftp_user }}@${{ secrets.ftp_host }}:${{ secrets.ftp_password}}
