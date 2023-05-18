@@ -16,7 +16,7 @@ jobs:
 
       - name: 🗑️ Remove /lost+found directory
         run: |
-          rm -rf lost+found
+          find . -type d -name "lost+found" -exec rm -rf {} \;
 
       - name: ⚙️ Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
